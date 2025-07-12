@@ -81,7 +81,7 @@ function App() {
       />
 
       {/* clearing local storage */}
-      <button
+      {/* <button
         onClick={() => {
           localStorage.clear();
           setRows([]);
@@ -89,7 +89,7 @@ function App() {
         className="absolute bg-red-500 text-white px-4 py-1 rounded-lg bottom-14 left-[50vw] translate-x-[-50%] -z-10 animate-pulse duration-75 cursor-pointer shadow-md shadow-red-950 hover:animate-none hover:shadow-sm"
       >
         Clear all data
-      </button>
+      </button> */}
     </>
   );
 }
