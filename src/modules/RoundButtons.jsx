@@ -45,7 +45,7 @@ export default function RoundButtons({ value, onChange }) {
   }
 
   if (status === "fail") {
-    return <div className="italic text-red-500">next time will be better</div>;
+    return <div className="italic text-red-500">try again :C</div>;
   }
 
   if (status === "success") {
@@ -53,7 +53,7 @@ export default function RoundButtons({ value, onChange }) {
       <input
         type="date"
         ref={inputRef}
-        className="border px-2 py-1 rounded-md z-40 relative bg-white"
+        className="relative z-40 px-2 py-1 bg-white border rounded-md"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onBlur={handleBlur}
@@ -65,13 +65,13 @@ export default function RoundButtons({ value, onChange }) {
   return (
     <div>
       <button
-        className="cursor-pointer ml-2 rounded-full border-2 border-white shadow-md hover:shadow-xs hover:scale-95 shadow-gray-600 transition"
+        className="ml-2 transition border-2 border-white rounded-full shadow-md cursor-pointer hover:shadow-xs hover:scale-95 shadow-gray-600"
         onClick={() => setStatus("success")}
       >
         ✔️
       </button>
       <button
-        className="cursor-pointer ml-2 rounded-full border-2 border-white shadow-md hover:shadow-xs hover:scale-95 shadow-gray-600 transition"
+        className="ml-2 transition border-2 border-white rounded-full shadow-md cursor-pointer hover:shadow-xs hover:scale-95 shadow-gray-600"
         onClick={() => {
           setStatus("fail");
           onChange("fail");

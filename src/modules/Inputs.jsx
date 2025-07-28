@@ -20,8 +20,8 @@ export default function Inputs({
   return (
     // whole input section
     <div
-      className={`fixed h-[33vh] md:mb-2 lg:relative lg:top-0 lg:h-[10vh] flex flex-col lg:flex-row w-full justify-around items-center bg-white z-10 transition-all duration-500 ease-in-out ${
-        vis ? "-bottom-[33vh]" : "bottom-6"
+      className={`fixed bg-white h-[50vh] -bottom-[48vh] md:mb-2 lg:relative lg:top-0 lg:h-[10vh] flex flex-col lg:flex-row w-full justify-around items-center z-10 transition-all duration-500 ease-in-out ${
+        vis ? "-bottom-[48vh]" : "bottom-0"
       }`}
     >
       {/* button for toggle visibility */}
@@ -40,7 +40,7 @@ export default function Inputs({
           id="company"
           type="text"
           placeholder="company"
-          className="my-2 outline-2 rounded-lg px-2"
+          className="px-2 my-2 rounded-lg outline-2"
           value={company}
           onChange={setCompany}
         />
@@ -52,7 +52,7 @@ export default function Inputs({
           id="link"
           type="text"
           placeholder="offer's link"
-          className="my-2 outline-2 rounded-lg px-2"
+          className="px-2 my-2 rounded-lg outline-2"
           value={offerLink}
           onChange={setOfferLink}
         />
@@ -64,7 +64,7 @@ export default function Inputs({
           id="website"
           type="text"
           placeholder="comapny's website"
-          className="my-2 outline-2 rounded-lg px-2"
+          className="px-2 my-2 rounded-lg outline-2"
           value={website}
           onChange={setWebsite}
         />
@@ -84,7 +84,7 @@ export default function Inputs({
       {/* button for adding inputs to the row */}
       <button
         onClick={onAdd}
-        className="cursor-pointer rounded-full border-2 border-white bg-white shadow-md hover:shadow-xs hover:scale-95 shadow-gray-600"
+        className="bg-white border-2 border-white rounded-full shadow-md cursor-pointer hover:shadow-xs hover:scale-95 shadow-gray-600"
       >
         ➕
       </button>

@@ -4,7 +4,7 @@ import Row from "./Row";
 export default function Table({ rows, onFeedbackAdd, onRowUpdate }) {
   return (
     <>
-      <h1 className="text-3xl bg-green-200 text-center font-extrabold py-4 mt-8 mb-5">
+      <h1 className="py-4 mt-8 mb-5 text-3xl font-extrabold text-center bg-green-200">
         Interview Tracking App
       </h1>
       <ul>
@@ -12,10 +12,10 @@ export default function Table({ rows, onFeedbackAdd, onRowUpdate }) {
         <Row
           number={"#"}
           company={"Company"}
-          r1={"Round 1"}
-          r2={"Round 2"}
-          r3={"Round 3"}
-          r4={"Round 4"}
+          r1={"Stage 1"}
+          r2={"Stage 2"}
+          r3={"Stage 3"}
+          r4={"Stage 4"}
           feedback={"Feedback"}
           offerLink={"offer's link"}
           website={"company website"}
