@@ -11,6 +11,8 @@ export default function Inputs({
   description,
   setDescription,
   onAdd,
+  filter,
+  onFilterChange,
 }) {
   // toggle visibility of inputs
   const [vis, setVis] = useState(false);
@@ -24,8 +26,6 @@ export default function Inputs({
         vis ? "-bottom-[59vh]" : "bottom-5"
       }`}
     >
-
-      
       {/* button for toggle visibility */}
       <button
         className={`scale-200 z-20 relative -top-8 -mb-6 mx-auto lg:hidden animate-bounce transition-transform duration-500 transform origin-center ${
@@ -36,14 +36,18 @@ export default function Inputs({
         ⬆️
       </button>
 
-<div className="flex flex-col w-[80%] lg:w-[15%]">
-  <label htmlFor="filter">Filter offers</label>
-  <input type="text"  placeholder="filter"
+      {/* filtering offers */}
+      <div className="flex flex-col w-[80%] lg:w-[15%]">
+        <label htmlFor="filter">Filter offers</label>
+        <input
+          id="filter"
+          type="text"
+          placeholder="filter"
           className="px-2 my-2 rounded-lg outline-2"
-          // value={filter}
-          // onChange={filterList}
-          />
-</div>
+          value={filter}
+          onChange={onFilterChange}
+        />
+      </div>
 
       {/* input for company's name */}
       <div className="flex flex-col w-[80%] lg:w-[15%]">

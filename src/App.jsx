@@ -3,6 +3,7 @@ import Inputs from "./modules/Inputs";
 import { useState, useEffect } from "react";
 
 function App() {
+  const [filter, setFilter] = useState("");
   const [company, setCompany] = useState("");
   const [offerLink, setOfferLink] = useState("");
   const [website, setWebsite] = useState("");
@@ -19,6 +20,19 @@ function App() {
   useEffect(() => {
     localStorage.setItem("interviewRows", JSON.stringify(rows));
   }, [rows]);
+
+  //filter functionality
+  function handleFilterChange(e) {
+    setFilter(e.target.value.toLowerCase());
+  }
+
+  const filteredRows = rows.filter((row) => {
+    return (
+      row.number.toString().includes(filter) ||
+      row.company.toLowerCase().includes(filter) ||
+      row.description.toLowerCase().includes(filter)
+    );
+  });
 
   // create new row
   function addRow() {
@@ -73,9 +87,11 @@ function App() {
         description={description}
         setDescription={(e) => setDescription(e.target.value)}
         onAdd={addRow}
+        filter={filter}
+        onFilterChange={handleFilterChange}
       />
       <Table
-        rows={rows}
+        rows={filteredRows}
         onFeedbackAdd={feedbackRowUpdate}
         onRowUpdate={updateRow}
       />
