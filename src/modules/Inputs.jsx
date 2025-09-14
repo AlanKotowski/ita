@@ -20,10 +20,12 @@ export default function Inputs({
   return (
     // whole input section
     <div
-      className={`fixed bg-white h-[50vh] -bottom-[48vh] md:mb-2 lg:relative lg:top-0 lg:h-[10vh] flex flex-col lg:flex-row w-full justify-around items-center z-10 transition-all duration-500 ease-in-out ${
-        vis ? "-bottom-[48vh]" : "bottom-0"
+      className={`fixed bg-white h-[60vh] -bottom-[48vh] md:mb-2 lg:relative lg:top-0 lg:h-[10vh] flex flex-col lg:flex-row w-full justify-around items-center z-10 transition-all duration-500 ease-in-out ${
+        vis ? "-bottom-[59vh]" : "bottom-5"
       }`}
     >
+
+      
       {/* button for toggle visibility */}
       <button
         className={`scale-200 z-20 relative -top-8 -mb-6 mx-auto lg:hidden animate-bounce transition-transform duration-500 transform origin-center ${
@@ -33,8 +35,18 @@ export default function Inputs({
       >
         ⬆️
       </button>
+
+<div className="flex flex-col w-[80%] lg:w-[15%]">
+  <label htmlFor="filter">Filter offers</label>
+  <input type="text"  placeholder="filter"
+          className="px-2 my-2 rounded-lg outline-2"
+          // value={filter}
+          // onChange={filterList}
+          />
+</div>
+
       {/* input for company's name */}
-      <div className="flex flex-col w-[80%] lg:w-[20%]">
+      <div className="flex flex-col w-[80%] lg:w-[15%]">
         <label htmlFor="company">Name of the company</label>
         <input
           id="company"
@@ -46,7 +58,7 @@ export default function Inputs({
         />
       </div>
       {/* input for company's website */}
-      <div className="flex flex-col w-[80%] lg:w-[20%]">
+      <div className="flex flex-col w-[80%] lg:w-[15%]">
         <label htmlFor="link">Link to the offer</label>
         <input
           id="link"
@@ -58,7 +70,7 @@ export default function Inputs({
         />
       </div>
       {/* input for offer */}
-      <div className="flex flex-col w-[80%] lg:w-[20%]">
+      <div className="flex flex-col w-[80%] lg:w-[15%]">
         <label htmlFor="website">Company's website</label>
         <input
           id="website"
